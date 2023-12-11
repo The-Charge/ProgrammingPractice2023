@@ -5,6 +5,7 @@
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -41,6 +42,11 @@ public class Robot extends TimedRobot {
     m_myRobot = new DifferentialDrive(m_left, m_right);
     m_leftStick = new Joystick(0);
     m_rightStick = new Joystick(1);
+
+    m_myRobot.setSafetyEnabled(true);
+    m_myRobot.setExpiration(.1);
+    // m_myRobot.feed();
+
   }
 
   @Override
