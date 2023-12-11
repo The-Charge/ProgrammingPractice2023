@@ -45,7 +45,7 @@ public class Robot extends TimedRobot {
 
     m_myRobot.setSafetyEnabled(true);
     m_myRobot.setExpiration(.1);
-    // m_myRobot.feed();
+    m_myRobot.feed();
 
   }
 
